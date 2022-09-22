@@ -2,17 +2,16 @@
     margin: 0;
     padding: 0;
 }
-body{
-    
-}
+
 .parent{
     width: 1500px;
-    height: 600px;
-    border: 10px solid black;
+    height: 800px;
+    border: 1px solid black;
     margin: auto;
     display: flex;
     position: relative;
     overflow: hidden;
+    margin-top: calc(50vh - 400px);
     
     
 }
@@ -24,68 +23,69 @@ body{
     border-radius: 50%;
     z-index: 100;
     margin: 5px;
-    position: fixed;
+    position: absolute;
+    bottom: 10px;
+    transition: 0.05s;
+    
+    
+}
+.dot:focus {
+    transform: scale(1.1);
 }
 .dot1{
     margin-left: 30px;
+    right: calc(50% + 45px);
 }
 .dot2 {
     margin-left: 60px ;
+    right: calc(50% + 15px);
 }
 .dot3{
     margin-left: 90px;
+    right: calc(50% - 15px);
 }
 .dot4{
     margin-left: 120px;
+    right: calc(50% - 45px);
 }
+.page-parent{
+    width: 400%;
+    height: 100%;
+    display: flex;
+    transition: 2s;
+    
 
+}
 .page{
     width: 100%;
     height: 100%;
     display: flex;
     flex-shrink: 0;
-    transition: 2s;
+   
+
 }
 .page1{
-    background-color: brown;
+    background-color: red;
 }
 .page2{
     background-color: blue;
 }
 .page3{
-    background-color: aquamarine;
+    background-color: green;
 }
 .page4{
-    background-color: navy ;
+    background-color: yellow ;
 }
-.dot1:focus ~ .page1 {
+
+.dot1:focus ~ .page-parent{
     transform: translate(0%);
-    
 }
-.dot2:focus ~ .page1 {
+.dot2:focus ~ .page-parent{
     transform: translate(-100%);
 }
-.dot2:focus ~ .page2{
-    transform: translate(-100%);
-}
-.dot3:focus ~ .page1 {
+.dot3:focus ~ .page-parent{
     transform: translate(-200%);
 }
-.dot3:focus ~ .page2{
-    transform: translate(-200%);
-}
-.dot3:focus ~ .page3 {
-    transform: translate(-200%);
-}
-.dot4:focus ~ .page1 {
-    transform: translate(-300%);
-}
-.dot4:focus ~ .page2{
-    transform: translate(-300%);
-}
-.dot4:focus ~ .page3 {
-    transform: translate(-300%);
-}
-.dot4:focus ~ .page4 {
+.dot4:focus ~ .page-parent{
     transform: translate(-300%);
 }
