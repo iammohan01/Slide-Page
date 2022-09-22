@@ -1,0 +1,91 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    
+}
+.parent{
+    width: 1500px;
+    height: 600px;
+    border: 10px solid black;
+    margin: auto;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    
+    
+}
+.dot
+{
+    height: 20px;
+    width: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    z-index: 100;
+    margin: 5px;
+    position: fixed;
+}
+.dot1{
+    margin-left: 30px;
+}
+.dot2 {
+    margin-left: 60px ;
+}
+.dot3{
+    margin-left: 90px;
+}
+.dot4{
+    margin-left: 120px;
+}
+
+.page{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-shrink: 0;
+    transition: 2s;
+}
+.page1{
+    background-color: brown;
+}
+.page2{
+    background-color: blue;
+}
+.page3{
+    background-color: aquamarine;
+}
+.page4{
+    background-color: navy ;
+}
+.dot1:focus ~ .page1 {
+    transform: translate(0%);
+    
+}
+.dot2:focus ~ .page1 {
+    transform: translate(-100%);
+}
+.dot2:focus ~ .page2{
+    transform: translate(-100%);
+}
+.dot3:focus ~ .page1 {
+    transform: translate(-200%);
+}
+.dot3:focus ~ .page2{
+    transform: translate(-200%);
+}
+.dot3:focus ~ .page3 {
+    transform: translate(-200%);
+}
+.dot4:focus ~ .page1 {
+    transform: translate(-300%);
+}
+.dot4:focus ~ .page2{
+    transform: translate(-300%);
+}
+.dot4:focus ~ .page3 {
+    transform: translate(-300%);
+}
+.dot4:focus ~ .page4 {
+    transform: translate(-300%);
+}
